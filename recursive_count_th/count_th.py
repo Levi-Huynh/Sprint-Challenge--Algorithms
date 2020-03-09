@@ -43,7 +43,7 @@ def count_th(word):
     mywordlen = len(word)
     key = "th"
     search = word.find(key)
-    print("word", word)
+    print("word", word[:2])
     if mywordlen == 0 or search == -1:
         return 0
     if search > -1:
@@ -53,7 +53,8 @@ def count_th(word):
     # search -1, or length of word is 0
     print("word.find(key) index", search)
     print("res", 1 + count_th(word))
-    return 1 + count_th(word)  # return 1, b/c assume
+    # return 1 to keep track of the amount of times  search finds th
+    return 1 + count_th(word)
 
 
 print(count_th("TthHtHthth"))
