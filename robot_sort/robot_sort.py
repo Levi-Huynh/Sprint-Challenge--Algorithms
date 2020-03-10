@@ -101,7 +101,7 @@ class SortingRobot:
         while self.light_is_on():  # create while loop based on flag
             # set flag off to terminate while loop, unless swap occurs /comparison continues
             self.set_light_off()
-            while self.can_move_right():  # check items to right
+            while self.can_move_right():  # check items to right, #keep repeating steps below, until can't move right
 
                 self.swap_item()  # pick up item to compare
                 self.move_right()  # move to r position to compare
@@ -114,7 +114,7 @@ class SortingRobot:
                 self.swap_item()  # pick up item
                 self.move_right()  # move r, to compare the two items
 
-            while self.can_move_left():  # repeat the steps above for items to left, once can't move right
+            while self.can_move_left():  # repeat the steps above for items to left, once can't move right. repeat steps below until can't move left 
                 self.swap_item()  # pick up item to compare
                 self.move_left()  # move to left list position
 

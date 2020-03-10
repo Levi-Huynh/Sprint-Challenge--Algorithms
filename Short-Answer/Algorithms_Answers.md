@@ -48,5 +48,5 @@ c)  def bunnyEars(bunnies):
 binary search!
 
 
-O(nlogn)
+O(log n)
 
